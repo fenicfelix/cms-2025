@@ -11,12 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/fontawesome.min.css') }}" type="text/css">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/simplebar.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/vendor/toastr/toastr.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/sidebar-dark.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/custom.css?v=1.0.1') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/fontawesome.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('backend/css/simplebar.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/vendor/toastr/toastr.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/sidebar-dark.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/custom.css?v=1.0.1') }}">
   <link rel="stylesheet" href="{{ asset(get_template_url().'css/admin.css') }}">
 
   @yield('styles')

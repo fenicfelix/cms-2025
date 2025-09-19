@@ -250,7 +250,7 @@
 @endsection
 
 @section('scripts')
-<script src="{{ asset('theme/backend/js/jquery.serialize-object.min.js') }}"></script>
+<script src="{{ asset('backend/js/jquery.serialize-object.min.js') }}"></script>
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <script>
     var menu_array = [];
@@ -260,6 +260,6 @@
     var add_menu_items_url = '{{ route("settings.menu_items.store") }}';
     var selectedMenu = '{{ session("menu") }}';
 </script>
-<script src="{{ asset('theme/backend/js/menu.js') }}"></script>
+<script src="{{ asset('backend/js/menu.js') }}"></script>
 
 @endsection

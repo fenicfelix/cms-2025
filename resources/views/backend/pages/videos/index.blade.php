@@ -2,7 +2,7 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
     
 @endsection
 

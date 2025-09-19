@@ -2,8 +2,8 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/photoswipe/photoswipe.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/photoswipe/default-skin/default-skin.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/photoswipe/photoswipe.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/photoswipe/default-skin/default-skin.css') }}">
     
 @endsection
 
@@ -142,7 +142,7 @@
         var delete_image_url = '{{ route("delete_image") }}';
         $("#delete-image").removeClass("d-none");
     </script>
-  <script src="{{ asset('theme/backend/js/media.js?v=1.0.3') }}"></script>
+  <script src="{{ asset('backend/js/media.js?v=1.0.3') }}"></script>
 
     
 @endsection

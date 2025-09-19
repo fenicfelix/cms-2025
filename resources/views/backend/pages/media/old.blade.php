@@ -2,8 +2,8 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/photoswipe/photoswipe.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/photoswipe/default-skin/default-skin.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/photoswipe/photoswipe.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/photoswipe/default-skin/default-skin.css') }}">
     
 @endsection
 

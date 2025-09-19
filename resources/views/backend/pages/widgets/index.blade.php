@@ -2,12 +2,12 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/summernote/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/dselect.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/flatpickr.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/summernote/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/dselect.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/flatpickr.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}">
         
 @endsection
 
@@ -142,9 +142,9 @@
     function calculate_word_count() {}
   </script>
     
-  <script src="{{ asset('theme/backend/vendor/datatables/datatables.min.js') }}"></script>
-  <script src="{{ asset('theme/backend/vendor/slugify/slugify.js') }}"></script>
-  <script src="{{ asset('theme/backend/vendor/summernote/summernote-lite.js?v=1.0.5') }}"></script>
-  <script src="{{ asset('theme/backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
-  <script src="{{ asset('theme/backend/js/summernote.js?v1.0.5') }}"></script>
+  <script src="{{ asset('backend/vendor/datatables/datatables.min.js') }}"></script>
+  <script src="{{ asset('backend/vendor/slugify/slugify.js') }}"></script>
+  <script src="{{ asset('backend/vendor/summernote/summernote-lite.js?v=1.0.5') }}"></script>
+  <script src="{{ asset('backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
+  <script src="{{ asset('backend/js/summernote.js?v1.0.5') }}"></script>
 @endsection

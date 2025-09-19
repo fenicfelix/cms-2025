@@ -1,12 +1,12 @@
 @extends('backend.layouts.backend')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/summernote/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/dselect.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/flatpickr.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/bootstrap-tagsinput.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/summernote/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/dselect.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/flatpickr.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}">
         
 @endsection
 
@@ -161,12 +161,12 @@
     var fetch_thumbnails_url = "{{ route('media.fetch_images', '1') }}";
     var post_task = "add";
   </script>
-    <script src="{{ asset('theme/backend/vendor/slugify/slugify.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/dselect/dselect.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-lite.js?v=1.0.3') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/summernote.js?v=1.0.1') }}"></script>
-    <script src="{{ asset('theme/backend/js/media.js?v=1.0.2') }}"></script>
+    <script src="{{ asset('backend/vendor/slugify/slugify.js') }}"></script>
+    <script src="{{ asset('backend/vendor/dselect/dselect.js') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-lite.js?v=1.0.3') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
+    <script src="{{ asset('backend/js/summernote.js?v=1.0.1') }}"></script>
+    <script src="{{ asset('backend/js/media.js?v=1.0.2') }}"></script>
 
     <script>
       // dselect(document.querySelector('.show-hosts'), {

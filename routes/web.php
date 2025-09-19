@@ -15,11 +15,11 @@ use App\Http\Controllers\WidgetsController;
 use App\Http\Controllers\MenuItemController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DatatablesController;
 use App\Http\Controllers\UserGroupsController;
 use App\Http\Controllers\Migration\WordpressController;
 use App\Http\Controllers\ProgramLineupController;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ Route::post('api/hide-breaking-news', [PostsController::class, 'hide_breaking_ne
 
 Route::middleware(['auth'])->group(
     function () {
-        Route::get('/', [AdminController::class, 'index'])->name('/');
+        Route::get('/', [DashboardController::class, 'index'])->name('/');
         Route::get('/wp/{type}/{page?}', [WordpressController::class, 'index'])->name('wp');
         Route::get('/ci/{type}/{page?}', [CIController::class, 'index'])->name('ci');
 

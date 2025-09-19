@@ -1,12 +1,12 @@
 @extends('backend.layouts.backend')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/summernote/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/dselect.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/flatpickr.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/summernote/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/dselect.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/flatpickr.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}">
 @endsection
 
 @section('main_body')
@@ -435,17 +435,17 @@
     </script>
 
 
-    <script src="{{ asset('theme/backend/vendor/datatables/datatables.min.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/dselect/dselect.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/flatpickr/flatpickr.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/slugify/slugify.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/bootstrap-tagsinput.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/typeahead.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/posts.js?v=1.0.5.1') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-lite.js?v=1.0.6') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/summernote.js?v1.0.6') }}"></script>
-    <script src="{{ asset('theme/backend/js/media.js?v=1.0.5') }}"></script>
+    <script src="{{ asset('backend/vendor/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('backend/vendor/dselect/dselect.js') }}"></script>
+    <script src="{{ asset('backend/vendor/flatpickr/flatpickr.js') }}"></script>
+    <script src="{{ asset('backend/vendor/slugify/slugify.js') }}"></script>
+    <script src="{{ asset('backend/js/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ asset('backend/js/typeahead.js') }}"></script>
+    <script src="{{ asset('backend/js/posts.js?v=1.0.5.1') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-lite.js?v=1.0.6') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
+    <script src="{{ asset('backend/js/summernote.js?v1.0.6') }}"></script>
+    <script src="{{ asset('backend/js/media.js?v=1.0.5') }}"></script>
 
     <script>
         $(document).ready(function() {

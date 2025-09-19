@@ -2,9 +2,9 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/summernote/summernote-lite.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/summernote/summernote-lite.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/summernote-lite.css') }}">
     
 @endsection
 
@@ -88,10 +88,10 @@
 
 @section('scripts')
 
-    <script src="{{ asset('theme/backend/js/posts.js?v=1.0.3') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-lite.js?v=1.0.3') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/summernote.js?v1.0.4') }}"></script>
+    <script src="{{ asset('backend/js/posts.js?v=1.0.3') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-lite.js?v=1.0.3') }}"></script>
+    <script src="{{ asset('backend/vendor/summernote/summernote-image-captionit.js') }}"></script>
+    <script src="{{ asset('backend/js/summernote.js?v1.0.4') }}"></script>
 
     <script>
         let submit_add_url = '{{ route("widgets.store") }}';

@@ -2,8 +2,8 @@
 
 @section('styles')
 
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/css/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}">
     
 @endsection
 
@@ -256,7 +256,7 @@
 
 @section('scripts')
 
-    <script src="{{ asset('theme/backend/js/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ asset('backend/js/bootstrap-tagsinput.js') }}"></script>
     <script>
         let submit_add_url = '{{ route("categories.store") }}';
         let submit_edit_url = '{{ route("update_category") }}';

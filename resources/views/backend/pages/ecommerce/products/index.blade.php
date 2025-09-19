@@ -1,7 +1,7 @@
 @extends('backend.layouts.backend')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/datatables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/datatables/datatables.min.css') }}">
 @endsection
 
 @section('main_body')
@@ -59,7 +59,7 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('theme/backend/vendor/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('backend/vendor/datatables/datatables.min.js') }}"></script>
     <script>
         datatable_url = "{{ route('datatable.get_products') }}";
         tableDefaultFilter = [0, "DESC"];

@@ -1,9 +1,9 @@
 @extends('backend.layouts.backend')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/schedule/jquery-ui.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/schedule/jquery.schedule.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/backend/vendor/schedule/jquery.schedule-demo.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/schedule/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/schedule/jquery.schedule.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/vendor/schedule/jquery.schedule-demo.css') }}">
     
 @endsection
 
@@ -90,8 +90,8 @@
         program_lineup = JSON.parse('{!! $program_lineup !!}');
       </script>
   @endif
-  <script src="{{ asset('theme/backend/vendor/schedule/jquery-ui.min.js') }}"></script>
-  <script src="{{ asset('theme/backend/vendor/schedule/jquery.schedule.js') }}"></script>
+  <script src="{{ asset('backend/vendor/schedule/jquery-ui.min.js') }}"></script>
+  <script src="{{ asset('backend/vendor/schedule/jquery.schedule.js') }}"></script>
 
   <script>
     let shows = JSON.parse('{!! json_encode($shows) !!}');

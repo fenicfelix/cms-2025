@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/style.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/css/auth.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/backend/vendor/toastr/toastr.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/style.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/css/auth.css') }}">
+  <link rel="stylesheet" href="{{ asset('backend/vendor/toastr/toastr.min.css') }}">
   <link rel="stylesheet" href="{{ asset(get_template_url().'css/admin.css') }}">
 
   @yield('styles')
@@ -42,8 +42,8 @@
     })()
   </script>
 
-  <script src="{{ asset('theme/backend/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('theme/backend/vendor/toastr/toastr.min.js') }}"></script>
+  <script src="{{ asset('backend/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('backend/vendor/toastr/toastr.min.js') }}"></script>
 
   @if (session('error'))
       <script>

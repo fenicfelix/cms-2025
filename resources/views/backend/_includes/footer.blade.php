@@ -1,16 +1,16 @@
 <!-- Required JS -->
 
-    <script src="{{ asset('theme/backend/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/bootstrap/bootstrap.bundle.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/simplebar/simplebar.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/slugify/slugify.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/toastr/toastr.min.js') }}"></script>
-    <script src="{{ asset('theme/backend/js/script.js') }}"></script>
+    <script src="{{ asset('backend/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('backend/vendor/bootstrap/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('backend/vendor/simplebar/simplebar.js') }}"></script>
+    <script src="{{ asset('backend/vendor/slugify/slugify.js') }}"></script>
+    <script src="{{ asset('backend/vendor/toastr/toastr.min.js') }}"></script>
+    <script src="{{ asset('backend/js/script.js') }}"></script>
     
-    <script src="{{ asset('theme/backend/js/functions.js?v=1.1.1') }}"></script>
+    <script src="{{ asset('backend/js/functions.js?v=1.1.1') }}"></script>
 
-    <script src="{{ asset('theme/backend/vendor/apexcharts/apexcharts.js') }}"></script>
-    <script src="{{ asset('theme/backend/vendor/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('backend/vendor/apexcharts/apexcharts.js') }}"></script>
+    <script src="{{ asset('backend/vendor/datatables/datatables.min.js') }}"></script>
 
     <script>
         let datatable_url = "{{ route('datatable.get_users') }}";
