@@ -20,7 +20,7 @@
             @if ($logged_user->group_id < 3)
                 <li class="nav-item">
                     <a class="nav-link px-2 d-flex align-items-center gap-3 {{ request()->is('*dashboard*') ? 'active' : '' }}"
-                        href="{{ route('dashboard') }}">
+                        href="{{ route('/') }}">
                         <i class="fas fa-tachometer-alt"></i> <span>Dashboard</span>
                     </a>
                 </li>

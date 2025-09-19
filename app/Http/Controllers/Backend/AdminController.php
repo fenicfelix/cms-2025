@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    public function index()
-    {
-    }
 
-    public function dashboard()
+    public function index()
     {
         if (Auth::user()->group_id == 5) return redirect('/')->with('warning', 'You are not allowed to access the page.');
         $this->data["page_title"] = "Dashboard - " . get_option('ak_app_title');
@@ -99,6 +96,6 @@ class AdminController extends Controller
             else return redirect(route('/'))->with('success', 'Welcome back ' . $user->first_name);
         }
 
-        return redirect("admin/login")->with('error', 'Invalid login details.');
+        return redirect("/login")->with('error', 'Invalid login details.');
     }
 }

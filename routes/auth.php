@@ -25,26 +25,26 @@ Route::post('guest/register', [CustomAuthController::class, 'store'])
 // Route::post('guest/register', [RegisteredUserController::class, 'store'])
 //     ->middleware('guest');
 
-Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware('guest')
     ->name('login');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware('guest');
 
-Route::get('/admin/forgot-password', [PasswordResetLinkController::class, 'create'])
+Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
     ->middleware('guest')
     ->name('password.request');
 
-Route::post('/admin/forgot-password', [PasswordResetLinkController::class, 'store'])
+Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
     ->middleware('guest')
     ->name('password.email');
 
-Route::get('/admin/reset-password/{token}', [NewPasswordController::class, 'create'])
+Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
     ->middleware('guest')
     ->name('password.reset');
 
-Route::post('/admin/reset-password', [NewPasswordController::class, 'store'])
+Route::post('/reset-password', [NewPasswordController::class, 'store'])
     ->middleware('guest')
     ->name('password.update');
 

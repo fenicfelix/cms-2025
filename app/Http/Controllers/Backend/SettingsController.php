@@ -17,7 +17,7 @@ class SettingsController extends Controller
     public function general()
     {
         if (Auth::user()->group_id > 2) return redirect('/')->with('warning', 'You are not allowed to access the page.');
-        if ($this->data["logged_user"]->group_id != 1) return redirect()->route('dashboard');
+        if ($this->data["logged_user"]->group_id != 1) return redirect()->route('/');
         $this->data["page_title"] = "Settings - " . get_option('ak_app_title');
         return view('backend.pages.settings.general', $this->data);
     }
@@ -25,7 +25,7 @@ class SettingsController extends Controller
     public function advertisements()
     {
         if (Auth::user()->group_id > 2) return redirect('/')->with('warning', 'You are not allowed to access the page.');
-        if ($this->data["logged_user"]->group_id != 1) return redirect()->route('dashboard');
+        if ($this->data["logged_user"]->group_id != 1) return redirect()->route('/');
         $this->data["page_title"] = "Advertisements - " . get_option('ak_app_title');
         $this->data["categories"] = Category::whereNull('parent')->get();
         return view('backend.pages.settings.advertisements', $this->data);
