@@ -24,11 +24,8 @@
     },
     "autoload": {
         "files": [
-            "app/Helpers/Admin.php",
-            "app/Helpers/Functions.php",
-            "app/Helpers/ecommerce/Ecommerce.php",
-            "app/Helpers/ecommerce/Daraja.php",
-            "app/Helpers/SitemapHelper.php"
+            "app/Helpers/Cms.php",
+            "app/Helpers/Functions.php"
         ],
         "psr-4": {
             "App\\": "app/",
