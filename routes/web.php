@@ -21,21 +21,9 @@ use App\Http\Controllers\UserGroupsController;
 use App\Http\Controllers\Migration\WordpressController;
 use App\Http\Controllers\ProgramLineupController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/login', [WordpressController::class, 'index'])->middleware('guest')->name('/');
 
 Route::post('api/hide-breaking-news', [PostsController::class, 'hide_breaking_news'])->name('hide_breaking_news');
-
 
 Route::middleware(['auth'])->group(
     function () {

@@ -18,13 +18,6 @@ Route::get('guest/register', [CustomAuthController::class, 'create'])
 Route::post('guest/register', [CustomAuthController::class, 'store'])
     ->middleware('guest');
 
-// Route::get('guest/register', [RegisteredUserController::class, 'create'])
-//     ->middleware('guest')
-//     ->name('register');
-
-// Route::post('guest/register', [RegisteredUserController::class, 'store'])
-//     ->middleware('guest');
-
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware('guest')
     ->name('login');
@@ -48,24 +41,9 @@ Route::post('/reset-password', [NewPasswordController::class, 'store'])
     ->middleware('guest')
     ->name('password.update');
 
-// Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
-//     ->middleware('auth')
-//     ->name('verification.notice');
-
-// Route::get('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
-//     ->middleware(['auth', 'signed', 'throttle:6,1'])
-//     ->name('verification.verify');
-
 Route::post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
     ->middleware(['auth', 'throttle:6,1'])
     ->name('verification.send');
-
-// Route::get('/confirm-password', [ConfirmablePasswordController::class, 'show'])
-//     ->middleware('auth')
-//     ->name('password.confirm');
-
-// Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store'])
-//     ->middleware('auth');
 
 Route::post('/ad/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')
