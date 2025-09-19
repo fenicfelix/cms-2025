@@ -1,18 +1,18 @@
 <?php
 
-use App\Http\Controllers\Backend\AdminController;
-use App\Http\Controllers\Backend\CategoriesController;
-use App\Http\Controllers\Backend\DatatablesController;
-use App\Http\Controllers\Backend\MediaController;
-use App\Http\Controllers\Backend\PagesController;
-use App\Http\Controllers\Backend\PostsController;
-use App\Http\Controllers\Backend\ProgramLineupController;
-use App\Http\Controllers\Backend\SettingsController;
-use App\Http\Controllers\Backend\ShowsController;
-use App\Http\Controllers\Backend\TagsController;
-use App\Http\Controllers\Backend\UserGroupsController;
-use App\Http\Controllers\Backend\UsersController;
-use App\Http\Controllers\Backend\VideosController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\DatatablesController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ProgramLineupController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ShowsController;
+use App\Http\Controllers\TagsController;
+use App\Http\Controllers\UserGroupsController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\VideosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Migration\WordpressController;
 use App\Http\Controllers\SitemapController;
