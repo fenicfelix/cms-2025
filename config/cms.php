@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'home_url' => env('HOME_URL', 'https://akika.digital'),
     "app_icon_light" => env('APP_ICON_LIGHT'),
     "app_icon_dark" => env('APP_ICON_DARK'),
     "app_favicon" => env('APP_FAVICON', 'favicon.ico'),

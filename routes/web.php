@@ -3,8 +3,6 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\CategoriesController;
 use App\Http\Controllers\Backend\DatatablesController;
-use App\Http\Controllers\Backend\Ecommerce\OrdersController;
-use App\Http\Controllers\Backend\Ecommerce\ProductsController;
 use App\Http\Controllers\Backend\MediaController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\MenuItemController;
@@ -18,14 +16,8 @@ use App\Http\Controllers\Backend\UserGroupsController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\Backend\VideosController;
 use App\Http\Controllers\Backend\WidgetsController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Migration\CIController;
 use App\Http\Controllers\Migration\WordpressController;
-use App\Http\Controllers\RSSController;
-use App\Http\Controllers\SitemapController;
-use App\Http\Controllers\TvController;
-use App\Models\Category;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,51 +40,7 @@ Route::get('/admin', function () {
     return redirect()->route('dashboard');
 })->middleware('auth');
 
-Route::get('/', [HomeController::class, 'index'])->name('/');
-Route::get('more-stories/{type}/{value}', [HomeController::class, 'more_stories'])->name('load_more');
-
-//Custom pages
-Route::get('/{slug}.html', [HomeController::class, 'page'])->name('page');
-
-Route::get('/feed', [RSSController::class, 'index'])->name('rss');
-Route::get('/feeds', [RSSController::class, 'feeds'])->name('feeds');
-Route::get('/feed/{category}', [RSSController::class, 'feed'])->name('category_rss');
-
-
-Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
-Route::get('/google-news-sitemap.xml', [SitemapController::class, 'googleNewsSitemap'])->name('google_news_sitemap.index');
-Route::get('/posts-sitemap.xml', [SitemapController::class, 'posts'])->name('posts_sitemap.index');
-Route::get('/posts-sitemap-{page?}.xml', [SitemapController::class, 'posts'])->name('posts_sitemap');
-Route::get('/categories-sitemap.xml', [SitemapController::class, 'categories'])->name('categories_sitemap');
-Route::get('/tags-sitemap.xml', [SitemapController::class, 'tags'])->name('tags_sitemap');
-Route::get('/authors-sitemap.xml', [SitemapController::class, 'authors'])->name('authors_sitemap');
-Route::get('/pages-sitemap.xml', [SitemapController::class, 'pages'])->name('pages_sitemap');
-
-Route::get('search/', [HomeController::class, 'search'])->name('search');
-Route::get('topic/{topic}', [HomeController::class, 'tags'])->name('topics');
-Route::get('preview/{id}', [HomeController::class, 'preview'])->name('preview');
-Route::get('author/{author}', [HomeController::class, 'author'])->name('author');
-Route::get('/{category}/article/{id}/{slug}', [HomeController::class, 'post'])->name('post');
-Route::get('/category/{category}', [HomeController::class, 'category'])->name('category');
-Route::get('{slug}/', [HomeController::class, 'old_post']);
-
 Route::post('api/hide-breaking-news', [PostsController::class, 'hide_breaking_news'])->name('hide_breaking_news');
-
-
-Route::prefix('tv')->group(function () {
-    Route::get('/home', [TvController::class, 'index'])->name('tv_home');
-    Route::get('/line-up/{day?}', [TvController::class, 'lineup'])->name('tv_lineup');
-    Route::get('/shows/{slug?}', [TvController::class, 'shows'])->name('tv_shows');
-    Route::get('/live/{id?}', [TvController::class, 'live'])->name('tv_live');
-});
-
-Route::prefix('ecommerce')->middleware(['auth'])->group(function () {
-
-    Route::resource('products', ProductsController::class)->except(["update", "store"]);
-    Route::post('products/update-product', [ProductsController::class, 'create_update_post'])->name('update_product');
-
-    Route::get('/orders', [OrdersController::class, 'index'])->name('ecommerce.orders');
-});
 
 
 Route::prefix('admin')->group(function () {
@@ -184,23 +132,5 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::post('/admin/custom-login', [AdminController::class, 'login'])->name('custom_login');
-// Route::get('/{slug}', [HomeController::class, 'old_post']); //Based on old WP permalink
-Route::get('/{slug}/page/{keys?}', [HomeController::class, 'old_post']); //Based on old WP permalink
-Route::get('/{category}/{postId}/{slug}', [HomeController::class, 'old_ci_post']); //Based on old CI permalink
-Route::get('/sitemap/news', [SitemapController::class, 'news']);
-Route::get('/test-news', function () {
-    $page = 1;
-    $limit = 100;
-    $news = App\Models\Post::isPublished()
-        ->where('published_at', '>=', Carbon\Carbon::now()->subDays(2))
-        ->with(["main_image", "category"])
-        ->orderBy('published_at', 'DESC')
-        ->skip(($page - 1) * $limit)
-        ->take($limit)
-        ->get();
-
-    return $news->toJson();
-});
-
 
 require __DIR__ . '/auth.php';

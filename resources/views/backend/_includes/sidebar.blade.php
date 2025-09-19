@@ -13,7 +13,7 @@
         <ul class="navbar-nav mb-4" id="mainMenu">
             <li class="nav-label px-2 small mt-3"><small>MAIN MENU</small></li>
             <li class="nav-item">
-                <a class="nav-link px-2 d-flex align-items-center gap-3" target="blank" href="{{ route('/') }}">
+                <a class="nav-link px-2 d-flex align-items-center gap-3" target="blank" href="{{ config('cms.home_url') }}">
                     <i class="fas fa-home"></i> <span>Homepage</span>
                 </a>
             </li>
@@ -58,71 +58,11 @@
                         <i class="fa fa-users"></i> <span>Users</span>
                     </a>
                 </li>
-                @if (config('cms.has_tv_section'))
-                    <li class="nav-label px-2 small mt-3"><small>TV SECTION</small></li>
-                    <li class="nav-item">
-                        <a class="nav-link px-2 d-flex align-items-center gap-3 dropdown-toggle {{ request()->is('*media*') || request()->is('*videos*') ? 'active' : '' }}"
-                            href="#media-collapse" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                            aria-controls="authentication-collapse">
-                            <i class="fas fa-video"></i> <span class="me-auto">Media</span>
-                        </a>
-                        <div class="ms-5 collapse {{ request()->is('*media*') || request()->is('*videos*') ? 'show' : '' }}"
-                            id="media-collapse" data-bs-parent="#mediaMenu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link {{ request()->is('*media*') ? 'active' : '' }}"
-                                        href="{{ route('media.index') }}">Images</a></li>
-                                <li class="nav-item"><a
-                                        class="nav-link {{ request()->is('*videos*') ? 'active' : '' }}"
-                                        href="{{ route('videos.index') }}">Videos</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-2 d-flex align-items-center gap-3 dropdown-toggle {{ request()->is('*tv*') ? 'active' : '' }}"
-                            href="#schedular-collapse" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                            aria-controls="authentication-collapse">
-                            <i class="fas fa-desktop"></i> <span class="me-auto">Tv Schedule</span>
-                        </a>
-                        <div class="ms-5 collapse {{ request()->is('*tv*') ? 'show' : '' }}" id="schedular-collapse"
-                            data-bs-parent="#mainMenu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a
-                                        class="nav-link {{ request()->is('*tv/shows*') ? 'active' : '' }}"
-                                        href="{{ route('tv.shows.index') }}">Shows</a></li>
-                                <li class="nav-item"><a
-                                        class="nav-link {{ request()->is('*tv/program_lineup*') ? 'active' : '' }}"
-                                        href="{{ route('tv.program_lineup.index') }}">Program Lineup</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link px-2 d-flex align-items-center gap-3 {{ request()->is('*media*') ? 'active' : '' }}"
-                            href="{{ route('media.index') }}">
-                            <i class="fas fa-video"></i> <span>Media</span>
-                        </a>
-                    </li>
-                @endif
-            @endif
-            @if (config('cms.ecommerce'))
-                <li class="nav-label px-2 small mt-3"><small>eCOMMERCE</small></li>
                 <li class="nav-item">
-                    <a class="nav-link px-2 d-flex align-items-center gap-3 dropdown-toggle {{ request()->is('*ecommerce*') ? 'active' : '' }}"
-                        href="#ecommerce-collapse" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                        aria-controls="authentication-collapse">
-                        <i class="fas fa-cog"></i> <span class="me-auto">eCommerce</span>
+                    <a class="nav-link px-2 d-flex align-items-center gap-3 {{ request()->is('*media*') ? 'active' : '' }}"
+                        href="{{ route('media.index') }}">
+                        <i class="fas fa-video"></i> <span>Media</span>
                     </a>
-                    <div class="ms-5 collapse {{ request()->is('*ecommerce*') ? 'show' : '' }}"
-                        id="ecommerce-collapse" data-bs-parent="#mainMenu">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a
-                                    class="nav-link {{ request()->is('*ecommerce/products*') ? 'active' : '' }}"
-                                    href="{{ route('products.index') }}">Products</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link {{ request()->is('*ecommerce/orders*') ? 'active' : '' }}"
-                                    href="{{ route('ecommerce.orders') }}">Orders</a></li>
-                        </ul>
-                    </div>
                 </li>
             @endif
             @if ($logged_user->group_id == 1)
